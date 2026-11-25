@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Profile } from "../lib/sanity/types";
 import { ArrowRightIcon } from "./Icons";
 
@@ -7,10 +6,6 @@ interface HeroProps {
 }
 
 export function Hero({ profile }: HeroProps) {
-  const portraitUrl =
-    profile.avatarUrl ||
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85";
-
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-subtle-glow">
       {/* Background Decorative Grid */}
@@ -59,21 +54,12 @@ export function Hero({ profile }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Column: Photo in the Circle (5 cols) */}
+          {/* Right Column: Photo Placeholder (5 cols) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div
               style={{ position: "relative" }}
               className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-84 lg:h-84 rounded-full overflow-hidden border-4 border-white shadow-xl ring-1 ring-slate-200/80 bg-slate-100"
-            >
-              <Image
-                src={portraitUrl}
-                alt={profile.name}
-                fill
-                priority
-                sizes="(max-width: 768px) 240px, (max-width: 1200px) 288px, 336px"
-                className="object-cover object-center"
-              />
-            </div>
+            />
           </div>
         </div>
       </div>

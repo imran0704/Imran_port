@@ -93,5 +93,5 @@ export async function getProjects(): Promise<Project[]> {
   }`;
 
   const live = await sanityFetch<Project[]>(projectsQuery);
-  return live && live.length > 0 ? live : fallbackProjects;
+  return live && live.length > 0 ? live.slice(0, 3) : fallbackProjects;
 }

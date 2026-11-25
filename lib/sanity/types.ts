@@ -27,7 +27,7 @@ export interface Project {
   slug?: string;
   tagline: string;
   description: string;
-  category: "Full Stack" | "Frontend & UI" | "Design System" | "Mobile / SaaS";
+  category: "Full Stack" | "Frontend & UI" | "Design System" | "Mobile / SaaS" | "Field Service";
   coverImage?: string;
   tags: string[];
   metrics?: {

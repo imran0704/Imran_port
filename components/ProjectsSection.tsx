@@ -25,7 +25,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
         {/* 3 Cards in one row on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, idx) => {
-            const liveUrl = project.demoUrl || project.githubUrl || "#";
+            const liveUrl = project.demoUrl || project.githubUrl;
 
             return (
               <article
@@ -51,15 +51,17 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
 
                 {/* Live Link */}
                 <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
-                  <a
-                    href={liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-900 hover:text-blue-600 transition-colors"
-                  >
-                    <span>Live Preview</span>
-                    <ArrowUpRightIcon className="w-3.5 h-3.5" />
-                  </a>
+                  {liveUrl && (
+                    <a
+                      href={liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-900 hover:text-blue-600 transition-colors"
+                    >
+                      <span>Live Preview</span>
+                      <ArrowUpRightIcon className="w-3.5 h-3.5" />
+                    </a>
+                  )}
 
                   {project.category && (
                     <span className="text-[11px] font-mono text-slate-400">

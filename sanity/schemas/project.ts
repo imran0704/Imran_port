@@ -37,6 +37,7 @@ export const projectSchema = {
           { title: "Frontend & UI", value: "Frontend & UI" },
           { title: "Design System", value: "Design System" },
           { title: "Mobile / SaaS", value: "Mobile / SaaS" },
+          { title: "Field Service", value: "Field Service" },
         ],
       },
     },
