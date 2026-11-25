@@ -55,6 +55,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
+## GitHub Pages Deployment
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the static site into `out/` and deploys it to GitHub Pages. In the repository's **Settings → Pages**, set the build and deployment source to **GitHub Actions**. The workflow configures the `/Imran_port` base path used by this project site.
+
 ## 🛠️ Sanity Headless CMS Setup Guide
 
 ### 1. What is required from your side?
